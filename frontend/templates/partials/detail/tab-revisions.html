@@ -1,0 +1,98 @@
+<h3>
+    Revisions
+    <div class="pull-right">
+        <div class="ant-btn-group">
+            <button type="button" class="ant-btn ant-btn-primary">
+                <span>Unified</span>
+            </button>
+            <button type="button" class="ant-btn ">
+                <span>Split</span>
+            </button>
+        </div>
+    </div>
+</h3>
+
+<div class="revision">
+    <div class="revision-description">
+        v1: <b>Jeremy</b> 修改了该脚本 2017-03-04 12:04:23
+        <span class="pull-right">
+            增加 0 行， 减少 6 行
+        </span>
+    </div>
+    <div class="revision-code-block">
+        <div class="revision-code-block__header">
+            增加 0 行， 减少 6 行
+            <button class="ant-btn ant-btn-sm pull-right"><i class="fa fa-cloud-download"></i> 下载</button>
+        </div>
+        <div class="revision-code-block__content">
+            <pre>
+                <code class="diff">
+@@ -13,12 +13,6 @@ if [ ! -z $TRAVIS_BUILD_DIR ] ; then
+   WORKSPACE=$TRAVIS_BUILD_DIR
+ fi
+
+-if [ -z $WORKSPACE ] ; then
+-  echo "No workspace configured, please set your WORKSPACE environment"
+-  exit
+-fi
+-
+-BUILDENV=`mktemp -d /tmp/mageteststand.XXXXXXXX`
+
+ echo "Using build directory ${BUILDENV}"
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+<div class="revision">
+    <div class="revision-description">
+        v0: <b>Jeremy</b> 创建了该脚本 2017-03-01 18:10:03
+        <span class="pull-right">
+            增加 32 行， 减少 0 行
+        </span>
+    </div>
+    <div class="revision-code-block">
+        <div class="revision-code-block__header">
+            增加 32 行， 减少 0 行
+            <button class="ant-btn ant-btn-sm pull-right"><i class="fa fa-cloud-download"></i> 下载</button>
+        </div>
+        <div class="revision-code-block__content">
+            <pre>
+                <code class="diff">
++set -e
++set -x
++
++# check if this is a travis environment
++function cleanup {
++  echo "Removing build directory ${BUILDENV}"
++  rm -rf ${BUILDENV}
++}
++
++trap cleanup EXIT
++
++if [ ! -z $TRAVIS_BUILD_DIR ] ; then
++  WORKSPACE=$TRAVIS_BUILD_DIR
++fi
++
++if [ -z $WORKSPACE ] ; then
++  echo "No workspace configured, please set your WORKSPACE environment"
++  exit
++fi
++
++BUILDENV=`mktemp -d /tmp/mageteststand.XXXXXXXX`
++
++echo "Using build directory ${BUILDENV}"
++
++git clone https://github.com/AOEpeople/MageTestStand.git ${BUILDENV}
++cp -rf ${WORKSPACE} ${BUILDENV}/.modman/
++${BUILDENV}/install.sh
++
++cd ${BUILDENV}/htdocs
++${BUILDENV}/bin/phpunit --colors -d display_errors=1 --coverage-clover=coverage.clover
++#wget https://scrutinizer-ci.com/ocular.phar
++#php ocular.phar code-coverage:upload --repository g/studioforty9/counties --format=php-clover coverage.clover                 </code>
+            </pre>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.page-sign .page-sm{
+    min-height: 91vh
+}
+
+.sign-form {
+    margin: 40px 0;
+}
+.text-center {
+    text-align: center;
+}
+.sign-form .form-title{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}

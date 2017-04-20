@@ -1,0 +1,23 @@
+<ol class="ant-breadcrumb">
+    {{with $len := len .Items}}
+        {{if lt $len 2}}
+            <span>
+                <a class="ant-breadcrumb-link" href="/scripts">/</a>
+                <span class="ant-breadcrumb-separator">&gt;</span>
+            </span>
+        {{else}}
+            <span>
+                <a href=".PrevUrl">返回上一级</a>
+            </span>
+            {{ range .Items }}
+                {{ if len .Url }}
+                    <a  class="ant-breadcrumb-link" href="{{.Url}}">{{.Name}}</a>
+                    <span class="ant-breadcrumb-separator">&gt;</span>
+                {{ else }}
+                    <span class="ant-breadcrumb-link">{{.Name}}</span>
+                    <span class="ant-breadcrumb-separator">&gt;</span>
+                {{ end }}
+            {{ end }}
+        {{end}}
+    {{end}}
+</ol>

@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/static/style/space.css"/>
+<div class="page-space">
+    <header>
+        {{ render "partials/nav.html" }}
+    </header>
+    <div class="page-lg">
+        <section class="page-header grid">
+            <div class="grid-8">
+                <div class="block">
+                    <div class="block shrink">
+                        <img class="ui mini image avatar" src="/static/assets/square-image.png"/>
+                    </div>
+                    <div class="block content">
+                        <div class="name">Jeremy</div>
+                        <div class="mark">
+                            <span class="label admin">Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-4">
+                <span class="btn-group pull-right">
+                     <button type="button" class="ant-btn ant-btn-sm"><i class="fa fa-external-link"></i> 登出</button>
+                </span>
+            </div>
+        </section>
+        <section class="page-main">
+            <div class="nav-tab">
+                <div class="ui top attached tabular menu">
+                    <a href="/auth/u/{{.Data.User.Name}}" class='item active'>
+                        基本信息
+                    </a>
+                    <a href="/auth/u/{{.Data.User.Name}}/message" class='item'>
+                        消息
+                    </a>
+                    <a href="/auth/u/{{.Data.User.Name}}/proposals" class='item'>
+                        审批
+                    </a>
+                    <a href="/auth/u/{{.Data.User.Name}}/setting" class='item'>
+                        设置
+                    </a>
+                </div>
+                <div class="ui bottom attached active tab segment" style="min-height: 60vh">
+                    <section class="userinfo">
+                        <p>
+                            <b>姓名：</b> {{.Data.User.Name}}
+                        </p>
+                        <p>
+                            <b>邮箱：</b> {{.Data.User.Email}}
+                        </p>
+                        <p>
+                            <b>手机：</b> {{.Data.User.Phone}}
+                        </p>
+                        <p>
+                            <b>头像：</b> <img class="ui mini image avatar" src="/static/assets/square-image.png"/>
+                        </p>
+                        <p>
+                            <button class="ant-btn ant-btn-ghost"><i class="fa fa-edit"></i> 修改</button>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/static/style/detail.css"/>
+<link rel="stylesheet" href="/static/vendor/highlight/styles/github.css"/>
+<div class="page-detail">
+    <header>
+        {{ render "partials/nav.html" }}
+    </header>
+
+    <div class="page-lg">
+        <section class="detail-header">
+            <div class="title-bar block">
+                <div class="block shrink">
+                    <span class="script-avatar">S</span>
+                </div>
+                <div class="block content">
+                    <div style="margin-top: 6px;">
+                        <span class="title">Ascript.sh</span>
+                        <span class="version">v1</span>
+                        <span class="tags" style="margin-left: 30px;">
+                            <div  class="ant-tag"><span class="ant-tag-text">#Tag1</span></div>
+                            <div  class="ant-tag"><span class="ant-tag-text">#Tag2</span></div>
+                            <div  class="ant-tag"><span class="ant-tag-text">#Tag3</span></div>
+                            <div  class="ant-tag"><span class="ant-tag-text">#Tag4</span></div>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="author">
+                            - 创建者 <b>Jeremy</b> <img class="ui avatar image" src="https://secure.gravatar.com/avatar/d8b2871cdac01b57bbda23716cc03b96" alt="">
+                        </span>
+                    </div>
+                    <div class="description">
+                        脚本描述，用于部署应用 A 的初始化脚本
+                    </div>
+                    <div class="contributors">
+                        <img src="/static/assets/contributors.png" height="19px" alt=""/>
+                    </div>
+                </div>
+                <div class="block content">
+                    <span class="btn-group pull-right">
+                        <button type="button" class="ant-btn"><i class="fa fa-trash"></i> 删除</button>
+                        <button type="button" class="ant-btn"><i class="fa fa-edit"></i> 修改</button>
+                        <button type="button" class="ant-btn"><i class="fa fa-cloud-download"></i> 下载 | 12</button>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="detail-body">
+            {{$tab := index .Data "tab"}}
+            <div class="ui top attached tabular menu">
+                <a href="/s/asdf" class='item {{if eq $tab "code"}} active {{end}}'>
+                    代码
+                </a>
+                <a href="/s/asdfas/revisions" class='item {{if eq $tab "revisions"}} active {{end}}'>
+                    修订版本（12)
+                </a>
+                <a href="/s/asdfad/proposals" class='item {{if eq $tab "proposals"}} active {{end}}'>
+                    修改提议
+                </a>
+                <a href="/s/asdfad/discuss" class='item {{if eq $tab "discuss"}} active {{end}}'>讨论</a>
+                <a href="/s/asdfad/setting" class='item {{if eq $tab "setting"}} active {{end}}'>设置</a>
+            </div>
+            <div class="ui bottom attached active tab segment">
+                {{$tab_partial := printf "partials/detail/tab-%s.html" $tab}}
+                {{CallTemplate  $tab_partial .}}
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="/static/vendor/highlight/highlight.pack.js"></script>
+<script>
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+</script>

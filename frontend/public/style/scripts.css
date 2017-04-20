@@ -1,0 +1,47 @@
+.page-scripts {
+
+}
+
+.ui.table {
+    border: none;
+}
+
+.ui.table thead th{
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 1.3rem .6rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    border-top: 1px solid rgb(228, 228, 228);
+}
+
+.ui.table tbody td {
+    padding: 1.3rem .6rem;
+    font-size: 1.2rem;
+}
+
+.ui.table tbody td a {
+    color: #333;
+}
+
+.ui.table tbody td a:hover {
+    color: #999;
+}
+
+.ui.table tbody td i {
+    color: #aaa;
+}
+
+.ui.table tbody td .fa-folder {
+    color: #108ee9;
+    font-size: 1.5rem;
+    margin-right: .6rem;
+}
+
+
+.ui.table tbody td .fa.file {
+    color: #9a9a9a;
+    font-size: 1.5rem;
+    margin-right: .6rem;
+}

@@ -1,0 +1,98 @@
+/**
+ * page Home
+ */
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2E323E;
+    margin: 12px 0;
+}
+
+.page-home {
+    min-height: 90vh;
+}
+
+.main {
+    background: #F9F9F9;
+}
+
+.main-left, .main-right {
+    padding: 20px;
+}
+
+.main-left section, .main-right section {
+    margin-bottom: 20px;
+}
+
+.statistic-box {
+    background: white;
+}
+
+.statistic-box-item {
+    background: white;
+    border-right: solid 1px whitesmoke;
+    height: 138px;
+    padding: 30px 40px;
+}
+
+.statistic-box-item__title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.statistic-box-item__title .icon-wrapper {
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px;
+    border: solid 1px whitesmoke;
+}
+
+.statistic-box-item__count {
+    font-size: 2.1rem;
+    font-family: "Montserrat";
+}
+
+.ui.list {
+    background: white;
+}
+
+.ui.list .item {
+    padding: 10px 15px !important;
+}
+
+.timeline-filter .ui.menu .item {
+    color: #868585;
+    font-weight: bold;
+}
+
+.timeline-filter .ui.tabular.menu .active.item {
+    background: transparent;
+    color: rgba(0, 0, 0, 0.95);
+    border-top-width: 1px;
+    border-color: #D4D4D5;
+    font-weight: bold;
+    margin-bottom: -1px;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: solid 2px #2196F3;
+}
+
+.timeline .ui.list > .item {
+    border-color: #e6e6e6;
+}
+.timeline .ui.list > .item .header{
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.timeline .ui.list > .item .description {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+
+.timeline .ui.list > .item .date {
+    color: #999;
+}

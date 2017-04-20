@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/static/style/scripts.css"/>
+<div class="page-scripts">
+    <header class="header">
+        {{ render "partials/nav.html" }}
+    </header>
+
+    <section class="main page-lg">
+        <div class="control-bar grid">
+            <div class="grid-6">
+                <a class="ant-btn ant-btn-primary" href="/s/new">
+                    <i class="fa fa-plus"></i>&nbsp; 新建脚本
+                </a>
+                <button class="ant-btn ant-btn-primary ant-btn-background-ghost">
+                    <i class="fa fa-plus"></i>&nbsp; 新建目录
+                </button>
+            </div>
+            <div class="grid-6">
+                <span class="ant-input-preSuffix-wrapper pull-right" style="width: 200px;">
+                    <input type="text" class="ant-input ant-input-search" placeholder="搜索脚本、目录"/>
+                    <span class="ant-input-suffix"><i class="anticon anticon-search ant-input-search-icon"></i></span>
+                </span>
+            </div>
+        </div>
+
+        <div class="script-table">
+            <div class="script-table-nav">
+                {{.Data.breadcrumb}}
+            </div>
+            <table class="ui table">
+                <colgroup>
+                    <col style="width: 40px;">
+                    <col style="width: 180px;">
+                    <col>
+                    <col style="width: 100px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox"/></th>
+                        <th>名称</th>
+                        <th>描述</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range $index, $page := .Data.Pages}}
+                        <tr>
+                            <td><input type="checkbox"/></td>
+                            {{if eq $page.Type "tree"}}
+                                <td class="collapsing">
+                                    <i class="fa fa-folder"></i> <a href="/scripts/{{$page.Name}}">{{$page.Name}} </a>
+                                </td>
+                                <td></td>
+                                <td> <i class="fa fa-info-circle"></i> </td>
+                            {{else}}
+                                <td class="collapsing">
+                                    <i class="fa file fa-file-text"></i> <a href="/s/{{$page.ObjectId}}"> {{$page.Name}} </a>
+                                </td>
+                                <td></td>
+                                <td> <i class="fa fa-info-circle"></i> </td>
+                            {{end}}
+                        </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+        <br><br>
+    </section>
+</div>

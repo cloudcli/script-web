@@ -1,0 +1,67 @@
+{
+	"comment": "",
+	"ignore": "",
+	"package": [
+		{
+			"checksumSHA1": "aXe5xGPtcSG6f29kuPkLiIo2o1g=",
+			"path": "github.com/aymerick/raymond",
+			"revision": "72acac2207479d21dd45898c2a4264246c818148",
+			"revisionTime": "2016-12-09T22:07:24Z"
+		},
+		{
+			"checksumSHA1": "Rvn+RH9pwFno1w6W+mhWsj/PxlA=",
+			"path": "github.com/aymerick/raymond/ast",
+			"revision": "72acac2207479d21dd45898c2a4264246c818148",
+			"revisionTime": "2016-12-09T22:07:24Z"
+		},
+		{
+			"checksumSHA1": "j5VDj4oma4JfGsmHuYaByvANU7A=",
+			"path": "github.com/aymerick/raymond/lexer",
+			"revision": "72acac2207479d21dd45898c2a4264246c818148",
+			"revisionTime": "2016-12-09T22:07:24Z"
+		},
+		{
+			"checksumSHA1": "TjYwYzmSbS9El6JjuWfL0WEipUg=",
+			"path": "github.com/aymerick/raymond/parser",
+			"revision": "72acac2207479d21dd45898c2a4264246c818148",
+			"revisionTime": "2016-12-09T22:07:24Z"
+		},
+		{
+			"checksumSHA1": "rbHTf+P1un8pTdTMwYR6W0P86sc=",
+			"path": "github.com/flosch/pongo2",
+			"revision": "22499f94d3d56c7238591344a6902715d0b8fbbf",
+			"revisionTime": "2016-08-13T17:05:23Z"
+		},
+		{
+			"checksumSHA1": "dhJirVIBz3qTQeLetNJxBpLZoTQ=",
+			"path": "github.com/shurcooL/sanitized_anchor_name",
+			"revision": "1dba4b3954bc059efc3991ec364f9f9a35f597d2",
+			"revisionTime": "2016-09-18T04:11:01Z"
+		},
+		{
+			"checksumSHA1": "dcOJtT2YpM6/qNQUa+IGGjFUy0k=",
+			"path": "golang.org/x/net/html",
+			"revision": "f2499483f923065a842d38eb4c7f1927e6fc6e6d",
+			"revisionTime": "2017-01-14T04:22:49Z"
+		},
+		{
+			"checksumSHA1": "BBN+OcVpSYnOYWdUq9A952+dCZA=",
+			"path": "golang.org/x/net/html/atom",
+			"revision": "f2499483f923065a842d38eb4c7f1927e6fc6e6d",
+			"revisionTime": "2017-01-14T04:22:49Z"
+		},
+		{
+			"checksumSHA1": "538I8ghUdvZa25NxgMUDpq14Qic=",
+			"path": "gopkg.in/check.v1",
+			"revision": "20d25e2804050c1cd24a7eea1e7a6447dd0e74ec",
+			"revisionTime": "2016-12-08T18:13:25Z"
+		},
+		{
+			"checksumSHA1": "lJHPwsxC3Xws7TIRUrB3Ki5HqkU=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "a5b47d31c556af34a302ce5d659e6fea44d90de0",
+			"revisionTime": "2016-09-28T15:37:09Z"
+		}
+	],
+	"rootPath": "github.com/kataras/go-template"
+}

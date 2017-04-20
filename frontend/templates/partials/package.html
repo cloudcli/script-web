@@ -1,0 +1,20 @@
+<div class="package-card">
+    <div class="package-card__title">
+        <a href="/package/{{ .Name }}">{{ .Name }}</a>
+    </div>
+    <div class="package-card__description">
+        {{ .Description}}
+    </div>
+    <div class="pacakge-card__tags">
+        {{ range $index, $tag := .TagsSlice}}
+            <a class="ui tag label">#{{ $tag }}</a>
+        {{ end }}
+    </div>
+    <div class="package-card__meta">
+        - by <a href="/u/{{ .UserName }}"> {{ .UserName }} </a>
+        <span class="column ten wide pull-right">
+            <span><i class="fa fa-download"></i> 231</span>
+            <span><i class="fa fa-star"></i> 12</span>
+        </span>
+    </div>
+</div>

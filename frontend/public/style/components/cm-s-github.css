@@ -1,0 +1,144 @@
+.cm-s-github {
+    font-family: inherit
+}
+
+.cm-s-github .CodeMirror-lines {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+    line-height: 18px;
+    background: #fff
+}
+
+.cm-s-github .CodeMirror-gutters {
+    background: #fff;
+    border-right-width: 0
+}
+
+.cm-s-github .CodeMirror-gutter-background {
+    border-right: 1px solid #ddd
+}
+
+.cm-s-github .CodeMirror-linenumber {
+    padding: 0 13px 0 19px
+}
+
+.cm-s-github .CodeMirror-cursor {
+    color: #000
+}
+
+.cm-s-github .CodeMirror-activeline-background {
+    background: #f5f5f5 !important
+}
+
+.cm-s-github .CodeMirror-selected {
+    background: #c8c8fa
+}
+
+.cm-s-github .cm-comment {
+    color: #969896
+}
+
+.cm-s-github .cm-string {
+    color: #183691
+}
+
+.cm-s-github .cm-string-2 {
+    color: #0086b3
+}
+
+.cm-s-github .cm-tag {
+    color: #63a35c
+}
+
+.cm-s-github .cm-keyword {
+    color: #a71d5d
+}
+
+.cm-s-github .cm-error,.cm-s-github .cm-invalidchar {
+    font-style: italic;
+    font-weight: 600;
+    color: #bd2c00;
+    text-decoration: underline
+}
+
+.cm-s-github .cm-conflict-marker {
+    font-style: normal !important;
+    font-weight: normal !important;
+    color: #bd2c00 !important;
+    text-decoration: none !important
+}
+
+.cm-s-github .CodeMirror-linebackground.conflict-background {
+    background-color: #fff9ea
+}
+
+.cm-s-github .cm-variable {
+    color: #ed6a43
+}
+
+.cm-s-github .cm-variable-2 {
+    color: #795da3
+}
+
+.CodeMirror-merge-header {
+    height: 30px
+}
+
+.CodeMirror-merge-header .CodeMirror-merge-pane {
+    height: 30px;
+    line-height: 30px
+}
+
+.cm-s-github .merge-gutter {
+    width: 14px
+}
+
+.conflict-background+.CodeMirror-gutter-wrapper .CodeMirror-linenumber {
+    background-color: #fff9ea
+}
+
+.conflict-gutter-marker {
+    background-color: #fff9ea
+}
+
+.conflict-gutter-marker::after,.conflict-gutter-marker::before {
+    position: absolute;
+    left: -1px;
+    content: "";
+    background-color: #bd2c00
+}
+
+.conflict-gutter-marker-start::after,.conflict-gutter-marker-end::after {
+    width: 1px;
+    height: 10px
+}
+
+.conflict-gutter-marker-start::before,.conflict-gutter-marker-middle::before,.conflict-gutter-marker-end::before {
+    width: 10px;
+    height: 1px
+}
+
+.conflict-gutter-marker-start::after {
+    bottom: 0
+}
+
+.conflict-gutter-marker-end::after {
+    top: 0
+}
+
+.conflict-gutter-marker-start::before {
+    top: 7px
+}
+
+.conflict-gutter-marker-end::before {
+    bottom: 7px
+}
+
+.conflict-gutter-marker-line::after,.conflict-gutter-marker-middle::after {
+    width: 1px;
+    height: 18px
+}
+
+.conflict-gutter-marker-middle::before {
+    top: 9px
+}

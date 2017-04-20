@@ -1,0 +1,24 @@
+.page-space {
+    min-height: 94vh;
+}
+
+.page-header {
+    margin: 20px 0;
+    padding: 10px;
+    background: #FAFAFC;
+}
+
+.page-header .avatar {
+    height: 35px !important;
+    margin-right: 10px !important;
+}
+
+.page-header .name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 1px;
+}
+
+.userinfo p{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/static/style/search.css"/>
+
+<div class="page-search">
+    <header>
+        {{ render "partials/nav.html" }}
+    </header>
+
+    <div class="page-sm">
+        <section class="search-box">
+            <div class="ui fluid icon input">
+                <input type="text" placeholder="搜索 3, 485 个脚本包">
+                <i class="search icon"></i>
+            </div>
+        </section>
+
+        <section class="search-result">
+            <div class="search-meta">
+                共 <b>{{ .Count }}</b> 个搜索结果，关键词 <i>安全</i>
+            </div>
+            <div class="package-list">
+                {{ range $index, $pkg := .Pkgs}}
+                    {{ template "partials/package.html" $pkg }}
+                {{ end }}
+            </div>
+
+            {{ render "partials/pagination.html" }}
+        </section>
+    </div>
+</div>

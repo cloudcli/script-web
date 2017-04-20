@@ -1,0 +1,31 @@
+<div class="nav">
+    <div class="ui inverted menu" style="border-radius: 0">
+        <a class="item" href="/">
+            <img src="/static/assets/logo.png" style="vertical-align: middle; margin-right: 10px; width: 19px;"/> Cloudcli 脚本共享平台
+        </a>
+        <a class="item" href="/scripts">
+           <i class="fa fa-code"></i>全部脚本
+        </a>
+        <a class="item">
+            <i class="fa fa-check-square-o"></i>审批
+        </a>
+        <a class="item">
+            <i class="fa fa-book"></i>文档
+        </a>
+        <a class="item">
+            <i class="fa fa-cloud"></i>云 SDK
+        </a>
+        <div class="right menu">
+            {{if index .Data "username"}}
+                <a class="item" href='/auth/u/{{index .Common "username"}}'> <i class="fa fa-user"></i> {{index .Data "username"}}</a>
+                <a class="item" href="/auth/logout">登出</a>
+            {{else}}
+                <a class="item" href="/auth/signin">登录</a>
+                <a class="item" href="/auth/signup">注册</a>
+            {{end}}
+            <a class="item">
+                <i class="fa fa-email"></i>消息
+            </a>
+        </div>
+    </div>
+</div>

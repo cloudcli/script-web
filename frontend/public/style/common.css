@@ -1,0 +1,115 @@
+html, body {
+    color: #333;
+    font-size: 12px;
+    font-family: Montserrat,PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif";
+    -webkit-font-smoothing: antialiased;
+    overflow: auto;
+}
+
+html body * {
+    box-sizing: border-box;
+}
+
+p, div, ul, li, span {
+    font-family: Montserrat,PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif" !important;
+}
+
+code {
+    font-family: initial !important;
+}
+
+/**
+ * layout
+ */
+.page-lg {
+    padding: 0 40px;
+}
+
+.page-md {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.page-sm {
+    width: 700px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #999;
+    margin: 0 40px 0 40px;
+    border-top: solid 1px whitesmoke;
+}
+
+
+/**
+ * header navigation
+ */
+
+header .nav .ui.menu {
+    min-height: 3.85714286em;
+}
+header .nav .ui.menu {
+    background: #2E323E;
+}
+
+header .nav .ui.menu .item {
+    font-size: 13px;
+}
+
+header .nav .ui.menu .item i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+header .nav .ui.menu .item::before {
+    width: 0;
+}
+
+/**
+ * control bar
+ */
+.control-bar {
+    background: #FAFAFC;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+
+/**
+ * https://fonts.google.com/specimen/Montserrat
+ */
+@font-face {
+    font-family: "Montserrat";
+    src: url('/static/font/Montserrat-Light.woff') format('woff'),
+         url('/static/font/Montserrat-Light.eot') format('eot'),
+         url('/static/font/Montserrat-Light.woff2') format('woff2');
+}
+
+.statistic {
+    font-family: "Montserrat";
+}
+
+
+.ui.selection.active.dropdown:hover ,
+.ui.selection.active.dropdown,
+.ui.selection.active.dropdown:hover .menu,
+.ui.selection.active.dropdown .menu,
+.ui.form textarea:focus,
+.ui.form input:not([type]):focus,
+.ui.form input[type="date"]:focus,
+.ui.form input[type="datetime-local"]:focus,
+.ui.form input[type="email"]:focus,
+.ui.form input[type="number"]:focus,
+.ui.form input[type="password"]:focus,
+.ui.form input[type="search"]:focus,
+.ui.form input[type="tel"]:focus,
+.ui.form input[type="time"]:focus,
+.ui.form input[type="text"]:focus,
+.ui.form input[type="file"]:focus,
+.ui.form input[type="url"]:focus{
+    border-color: #108ee9;
+}
