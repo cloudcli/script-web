@@ -13,8 +13,10 @@
 
 ## 安装
 
-
+```bash
 go get -u github.com/cloudcli/script-web
+```
+
 
 ## 运行
 
